@@ -73,8 +73,15 @@ img {
 
 /*header*/
 
+.webp .header {
+  background-image: url(../img/banner.webp);
+}
+
+.no-webp .header {
+    background-image: url(../img/banner.jpg);
+}
+
 .header {
-  background-image: url(../img/banner.jpg);
   height: 60rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -160,12 +167,16 @@ img {
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 2rem;
+  border: none;
 }
 
 @media (min-width: 768px) {
     .boton {
       display: inline-block;
     }
+}
+.boton:hover {
+  cursor: pointer;
 }
 
 .boton--primario {
@@ -213,25 +224,55 @@ img {
 
 /*sobre nosotros*/
 
-@media (min-width: 768px) {
-    .sobre-nosotros {
-      display: flex;
-      justify-content: space-between;
-    }
-    .sobre-nosotros__imagen,
-    .sobre-nosotros__texto {
-      flex-basis: calc(50% - 1rem);
-    }
-    .sobre-nosotros {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 2rem;
-    }
+@media (min-width: 768px) { 
+  .sobre-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
 }
 
 /*curso*/
 
 .curso {
   padding: 3rem 0;
-  border-bottom: 1px solid var(--gris);
+  border-bottom: 4px solid var(--gris);
+}
+
+/*contacto*/
+
+.contacto-bg {
+  background-image: url(../img/contacto.jpg);
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*formulario*/
+
+.formulario {
+  background-color: var(--blanco);
+  margin: -5rem auto 0 auto;
+  width: 95%;
+  padding: 5rem;
+}
+
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.campo__label {
+  flex: 0 0 9rem;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.campo__field {
+  flex: 1;
+  border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+  height: 20rem;
 }

@@ -4,10 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=D">
+  <meta name="description" content="Página web blog de café">
+
   <title>BlogDecafé</title>
+
+  <!--prefetch-->
+
+  <link rel="prefetch" href="nosotros.html" as="document">
+
+  <!--preload-->
+
+  <link rel="preload" href="css/normalize.css" as="style">
   <link rel="stylesheet" href="css/normalize.css">
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" crossorigin="crossorigin" as="font" >
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="css/styles.css" as="style">
   <link rel="stylesheet" href="css/styles.css">
+
+
+  <link rel="preload" href="img/blog1.jpg" as="image">
   
 </head>
 <body>
@@ -40,18 +57,24 @@
 
       <article class="entrada">
           <div class="entrada__imagen">
-            <img src="img/blog1.jpg" alt="imagen blog">
+            <picture>
+              <sorce  class="loading-lazy" srcset="img/blog1.webp" type="image/webp">
+              <img  class="loading-lazy" src="img/blog1.jpg" alt="imagen blog">
+            </picture>
           </div>
           <div class="entrada__contenido">
-            <h1 class="no-margin">1 Tipos De Grano De Café</h1>
+            <h4 class="no-margin">1 Tipos De Grano De Café</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos veritatis accusamus officiis cumque dicta? At repudiandae aut qui hic ducimus sapiente ab tenetur numquam, aspernatur perferendis aliquid pariatur voluptatum quam?</p>
-            <a href="entrtada.html" class="boton boton--primario">Leer Entrada</a>
+            <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
           </div>
       </article>
 
       <article class="entrada">
           <div class="entrada__imagen">
-            <img src="img/blog3.jpg" alt="imagen blog">
+            <picture>
+              <sorce  class="loading-lazy" srcset="img/blog2.webp" type="image/webp">
+              <img  class="loading-lazy" src="img/blog2.jpg" alt="imagen blog">
+            </picture>
           </div>
           <div class="entrada__contenido">
             <h1 class="no-margin">2 Tres Deliciosas Recetas De Café</h1>
@@ -62,7 +85,10 @@
 
       <article class="entrada">
         <div class="entrada__imagen">
-          <img src="img/blog2.jpg" alt="imagen blog">
+          <picture>
+            <sorce  class="loading-lazy" srcset="img/blog3.webp" type="image/webp">
+            <img  class="loading-lazy" src="img/blog3.jpg" alt="imagen blog">
+          </picture>
         </div>
         <div class="entrada__contenido">
           <h1 class="no-margin">3 Beneficios Del Café</h1>
@@ -83,7 +109,7 @@
           <p class="widget-curso__label">Cupo:
             <span class="widget-curso__info">20</span>
           </p>
-          <a href="entrtada.html" class="boton boton--secundario">Mas informacion</a>
+          <a href="entrtada.html" class="boton boton--secundario">Mas informacion sobre nuestros cursos</a>
         </li>
 
         <li class="widget-curso">
@@ -94,7 +120,7 @@
           <p class="widget-curso__label">Cupo:
             <span class="widget-curso__info">20</span>
           </p>
-          <a href="entrtada.html" class="boton boton--secundario">Mas informacion</a>
+          <a href="entrtada.html" class="boton boton--secundario">Mas informacion sobre nuestros cursos</a>
         </li>
     
       </ul>
@@ -116,6 +142,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/modernizr.js"></script>
   
 </body>
 </html>
